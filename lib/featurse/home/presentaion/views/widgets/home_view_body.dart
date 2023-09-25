@@ -1,3 +1,4 @@
+import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +23,9 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(height: 40),
             Text(
               'Best Seller',
-              style: Styles.titleMedium,
+              style: Styles.textStyle18,
             ),
+            SizedBox(height: 20),
             BestSellerListViewItem(),
           ],
         ),
@@ -46,7 +48,7 @@ class BestSellerListViewItem extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.amber,
+                color: Colors.red,
                 image: const DecorationImage(
                   image: AssetImage(AssetsData.testImage),
                   fit: BoxFit.fill,
