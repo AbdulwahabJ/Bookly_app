@@ -80,7 +80,7 @@ flutter:
   fonts:
     - family: Playfair Display
       fonts:
-        - asset: fonts/
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

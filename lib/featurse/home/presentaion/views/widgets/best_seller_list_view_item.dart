@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../constants.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
+import 'book_Rating.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -28,32 +28,36 @@ class BestSellerListViewItem extends StatelessWidget {
           ),
           const SizedBox(width: 30),
           SizedBox(
-            width: MediaQuery.of(context).size.width * .5,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Harry Potter and the Goblet of Fire',
-                  style:
-                      Styles.textStyle20.copyWith(fontFamily: kPlayfairDisplay),
-                  // overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 3),
-                const Text(
-                  'J.K. Rowling',
-                  style: Styles.textStyle14,
-                ),
-                const SizedBox(height: 3),
-                Row(
-                  children: [
-                    Text(
-                      '19.99 \$',
-                      style: Styles.textStyle20
-                          .copyWith(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ],
+            width: MediaQuery.of(context).size.width * .6,
+            child: Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Harry Potter and the Goblet of Fire',
+                    style: Styles.textStyle20
+                        .copyWith(fontFamily: kPlayfairDisplay),
+                    // overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(height: 3),
+                  const Text(
+                    'J.K. Rowling',
+                    style: Styles.textStyle14,
+                  ),
+                  const SizedBox(height: 3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '19.99 \$',
+                        style: Styles.textStyle18
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      const BookRating(),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
