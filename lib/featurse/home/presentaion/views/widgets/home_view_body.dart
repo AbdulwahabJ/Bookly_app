@@ -1,4 +1,3 @@
-import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -56,6 +55,19 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(width: 30),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * .5,
+            child: const Column(
+              children: [
+                Text(
+                  'Harry Potter and the Goblet of Fire Potter and the Goblet oPotter and the Goblet oPotter and the Goblet o',
+                  style: Styles.textStyle20,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
