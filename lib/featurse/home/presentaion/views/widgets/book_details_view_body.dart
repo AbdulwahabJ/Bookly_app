@@ -18,11 +18,11 @@ class BookDetailsViewBody extends StatelessWidget {
             child: Column(
               children: [
                 CustomBookDetailsAppBar(),
-                SizedBox(height: 14),//
+                SizedBox(height: 14), //
                 BookDetailsSection(),
-                Expanded(child: SizedBox(height: 40)),//
+                Expanded(child: SizedBox(height: 40)), //
                 SimillarBookSection(),
-                SizedBox(height: 16),//
+                SizedBox(height: 16), //
               ],
             ),
           ),
