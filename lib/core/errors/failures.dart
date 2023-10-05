@@ -51,8 +51,11 @@ class ServerFailure extends Failure {
       return ServerFailure('Your requst not found ,please try agine later');
     } else if (statusCode == 500) {
       return ServerFailure('Inernal Server Error ,please try agine later');
+    } else if (statusCode == 429) {
+      return ServerFailure(
+          'Too many requests!! ,this happened because the app using online api,Please try agine later');
     } else {
-      return ServerFailure('Opps!! There was an Error ,Please try agine later');
+      return ServerFailure('Unexpected Error! , please try later');
     }
   }
 }

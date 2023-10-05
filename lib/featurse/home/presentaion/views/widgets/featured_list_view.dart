@@ -3,7 +3,6 @@ import 'package:bookly_app/core/utils/widgets/custome_loding_indecator.dart';
 import 'package:bookly_app/featurse/home/presentaion/manger/featured_books_cubit/featurd_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'custom_book_image.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -25,7 +24,7 @@ class FeaturedBooksListView extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 6.0, vertical: 8),
                 child: CustomeBookImage(
-                  imageUrl: state.books[index].volumeInfo!.imageLinks!.thumbnail!,
+                  imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
                 ),
               );
             },
